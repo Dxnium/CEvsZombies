@@ -1,0 +1,3 @@
+/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir
+/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/edit_cache.dir

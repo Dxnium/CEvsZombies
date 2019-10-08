@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/CEvsZombies.dir/main.cpp.o  -o CEvsZombies 
