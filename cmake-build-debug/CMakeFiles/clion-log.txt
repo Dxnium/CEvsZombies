@@ -1,4 +1,4 @@
-/snap/clion/85/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies"
+/snap/clion/88/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/home/danium/Qt/5.13.0/gcc_64/lib/cmake -G "CodeBlocks - Unix Makefiles" "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies"
 -- The C compiler identification is GNU 7.4.0
 -- The CXX compiler identification is GNU 7.4.0
 -- Check for working C compiler: /usr/bin/cc

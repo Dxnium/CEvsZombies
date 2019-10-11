@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/85/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/85/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,6 +79,9 @@ CEvsZombies_EXTERNAL_OBJECTS =
 
 CEvsZombies: CMakeFiles/CEvsZombies.dir/main.cpp.o
 CEvsZombies: CMakeFiles/CEvsZombies.dir/build.make
+CEvsZombies: /home/danium/Qt/5.13.0/gcc_64/lib/libQt5Widgets.so.5.13.0
+CEvsZombies: /home/danium/Qt/5.13.0/gcc_64/lib/libQt5Gui.so.5.13.0
+CEvsZombies: /home/danium/Qt/5.13.0/gcc_64/lib/libQt5Core.so.5.13.0
 CEvsZombies: CMakeFiles/CEvsZombies.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CEvsZombies"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CEvsZombies.dir/link.txt --verbose=$(VERBOSE)
