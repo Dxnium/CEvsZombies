@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.cpp" "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.o"
   "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/main.cpp" "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

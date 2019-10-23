@@ -123,6 +123,33 @@ CEvsZombies/fast:
 	$(MAKE) -f CMakeFiles/CEvsZombies.dir/build.make CMakeFiles/CEvsZombies.dir/build
 .PHONY : CEvsZombies/fast
 
+GUI/StartWindow.o: GUI/StartWindow.cpp.o
+
+.PHONY : GUI/StartWindow.o
+
+# target to build an object file
+GUI/StartWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/CEvsZombies.dir/build.make CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.o
+.PHONY : GUI/StartWindow.cpp.o
+
+GUI/StartWindow.i: GUI/StartWindow.cpp.i
+
+.PHONY : GUI/StartWindow.i
+
+# target to preprocess a source file
+GUI/StartWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/CEvsZombies.dir/build.make CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.i
+.PHONY : GUI/StartWindow.cpp.i
+
+GUI/StartWindow.s: GUI/StartWindow.cpp.s
+
+.PHONY : GUI/StartWindow.s
+
+# target to generate assembly for a file
+GUI/StartWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/CEvsZombies.dir/build.make CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.s
+.PHONY : GUI/StartWindow.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CEvsZombies"
 	@echo "... edit_cache"
+	@echo "... GUI/StartWindow.o"
+	@echo "... GUI/StartWindow.i"
+	@echo "... GUI/StartWindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

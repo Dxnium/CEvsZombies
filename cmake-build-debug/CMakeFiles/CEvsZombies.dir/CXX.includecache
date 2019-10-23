@@ -6,14 +6,16 @@
 
 #IncludeRegexTransform: 
 
-/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/main.cpp
-QtWidgets/QApplication
+/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.cpp
+iostream
 -
-QtWidgets/QWidget
+QtWidgets/QPushButton
 -
-QtWidgets/QGridLayout
--
-QtWidgets/QLabel
+StartWindow.h
+/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.h
+
+/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.h
+QWidget
 -
 
 /home/danium/Qt/5.13.0/gcc_64/include/QtCore/qalgorithms.h
@@ -108,20 +110,6 @@ limits.h
 new
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qcoreapplication.h
-QtCore/qglobal.h
--
-QtCore/qstring.h
--
-QtCore/qobject.h
--
-QtCore/qcoreevent.h
--
-QtCore/qeventloop.h
--
-QtCore/qscopedpointer.h
--
-
 /home/danium/Qt/5.13.0/gcc_64/include/QtCore/qcoreevent.h
 QtCore/qnamespace.h
 -
@@ -168,10 +156,6 @@ list
 map
 -
 utility
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qeventloop.h
-QtCore/qobject.h
 -
 
 /home/danium/Qt/5.13.0/gcc_64/include/QtCore/qfile.h
@@ -824,20 +808,14 @@ QtCore/qsharedpointer.h
 QtCore/qrect.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qguiapplication.h
+/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qicon.h
 QtGui/qtguiglobal.h
 -
-QtCore/qcoreapplication.h
--
-QtGui/qwindowdefs.h
--
-QtGui/qinputmethod.h
--
-QtCore/qlocale.h
--
-QtCore/qpoint.h
--
 QtCore/qsize.h
+-
+QtCore/qlist.h
+-
+QtGui/qpixmap.h
 -
 
 /home/danium/Qt/5.13.0/gcc_64/include/QtGui/qimage.h
@@ -860,12 +838,6 @@ QtCore/qrect.h
 QtCore/qstring.h
 -
 QtCore/qstringlist.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qinputmethod.h
-QtGui/qtguiglobal.h
--
-QtCore/qobject.h
 -
 
 /home/danium/Qt/5.13.0/gcc_64/include/QtGui/qkeysequence.h
@@ -1038,106 +1010,28 @@ QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QApplication
-qapplication.h
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qapplication.h
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QGridLayout
-qgridlayout.h
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qgridlayout.h
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QLabel
-qlabel.h
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qlabel.h
+/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QPushButton
+qpushbutton.h
+/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qpushbutton.h
 
 /home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QWidget
 qwidget.h
 /home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qwidget.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qapplication.h
+/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qabstractbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtCore/qcoreapplication.h
+QtGui/qicon.h
 -
-QtGui/qwindowdefs.h
--
-QtCore/qpoint.h
--
-QtCore/qsize.h
--
-QtGui/qcursor.h
--
-QtWidgets/qdesktopwidget.h
--
-QtGui/qguiapplication.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qboxlayout.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qlayout.h
--
-QtWidgets/qwidget.h
--
-limits.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qdesktopwidget.h
-QtWidgets/qtwidgetsglobal.h
+QtGui/qkeysequence.h
 -
 QtWidgets/qwidget.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qframe.h
+/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qpushbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtWidgets/qwidget.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qgridlayout.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qlayout.h
--
-QtWidgets/qwidget.h
--
-limits.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qlabel.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qlayout.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qobject.h
--
-QtWidgets/qlayoutitem.h
--
-QtWidgets/qsizepolicy.h
--
-QtCore/qrect.h
--
-QtCore/qmargins.h
--
-limits.h
--
-QtWidgets/qboxlayout.h
--
-QtWidgets/qgridlayout.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qlayoutitem.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qsizepolicy.h
--
-QtCore/qrect.h
--
-limits.h
+QtWidgets/qabstractbutton.h
 -
 
 /home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qsizepolicy.h

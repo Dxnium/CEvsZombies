@@ -1,23 +1,13 @@
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QWidget>
-#include <QtWidgets/QGridLayout>
-#include <QtWidgets/QLabel>
+#include <QApplication>
+#include "GUI/StartWindow.h"
 
 int main(int argc, char *argv[]) {
-//Qt test
+
     QApplication app(argc, argv);
 
-    QWidget widget;
-    widget.resize(640, 480);
-    widget.setWindowTitle("Hello, world!!!");
+    StartWindow *widget =  new StartWindow();
 
-    QGridLayout *gridLayout = new QGridLayout(&widget);
-
-    QLabel *label = new QLabel("Hello, world!!!");
-    label->setAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
-    gridLayout->addWidget(label);
-
-    widget.show();
+    widget->show();
 
     return app.exec();
 }
