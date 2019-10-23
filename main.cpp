@@ -3,6 +3,7 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 
+/*
 int main(int argc, char *argv[]) {
 //Qt test
     QApplication app(argc, argv);
@@ -17,7 +18,8 @@ int main(int argc, char *argv[]) {
     label->setAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
     gridLayout->addWidget(label);
 
+
     widget.show();
 
     return app.exec();
-}
+}*/
