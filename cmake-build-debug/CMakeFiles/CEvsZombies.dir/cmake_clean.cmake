@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CEvsZombies"
   "CEvsZombies.pdb"
+  "CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.o"
   "CMakeFiles/CEvsZombies.dir/main.cpp.o"
 )
 
