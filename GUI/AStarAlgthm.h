@@ -30,6 +30,9 @@ typedef pair<double, pair<int, int>> pPair;
 class AStarAlgthm {
 
     public:
+    list<int> XList;
+    list<int> YList;
+
     /* Description of the Grid-
      1--> The cell is not blocked
      0--> The cell is blocked    */

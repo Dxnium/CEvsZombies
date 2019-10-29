@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
-  "CEvsZombies"
-  "CEvsZombies.pdb"
-  "CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.o"
   "CMakeFiles/CEvsZombies.dir/main.cpp.o"
+  "CMakeFiles/CEvsZombies.dir/GUI/AStarAlgthm.cpp.o"
+  "CMakeFiles/CEvsZombies.dir/GUI/gameMatrixGUI.cpp.o"
+  "CEvsZombies.pdb"
+  "CEvsZombies"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -6,52 +6,76 @@
 
 #IncludeRegexTransform: 
 
-/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.cpp
+/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/AStarAlgthm.h
+bits/stdc++.h
+-
+
+/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/gameMatrixGUI.cpp
+gameMatrixGUI.h
+/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/gameMatrixGUI.h
+gameMatrixGUI.h
+/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/gameMatrixGUI.h
+QPainter
+-
+QTime
+-
 iostream
 -
-QtWidgets/QPushButton
+bits/stdc++.h
 -
-StartWindow.h
-/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.h
+random
+-
 
-/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.h
+/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/gameMatrixGUI.h
 QWidget
 -
+QKeyEvent
+-
+QtWidgets/QLabel
+-
+QMovie
+-
+AStarAlgthm.h
+/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/AStarAlgthm.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qalgorithms.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
+qdatetime.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
 -
 intrin.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qarraydata.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 QtCore/qrefcount.h
 -
 string.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qatomic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
 QtCore/qglobal.h
 -
 QtCore/qbasicatomic.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qatomic_bootstrap.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
 QtCore/qgenericatomic.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qatomic_cxx11.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
 QtCore/qgenericatomic.h
 -
 atomic
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qatomic_msvc.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
 QtCore/qgenericatomic.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qbasicatomic.h
-QtCore/qglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+QtCore/qatomic.h
 -
 QtCore/qatomic_bootstrap.h
 -
@@ -60,7 +84,7 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_msvc.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qbytearray.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
 QtCore/qrefcount.h
 -
 QtCore/qnamespace.h
@@ -77,32 +101,34 @@ string
 -
 iterator
 -
+QtCore/qstring.h
+-
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qbytearraylist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
 QtCore/qlist.h
 -
 QtCore/qbytearray.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qchar.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qcompilerdetection.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
 QtCore/qglobal.h
 -
 utility
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qconfig-bootstrapped.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qconfig.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qcontainerfwd.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qcontiguouscache.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
 QtCore/qatomic.h
 -
 limits.h
@@ -110,7 +136,21 @@ limits.h
 new
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qcoreevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
+QtCore/qglobal.h
+-
+QtCore/qstring.h
+-
+QtCore/qobject.h
+-
+QtCore/qcoreevent.h
+-
+QtCore/qeventloop.h
+-
+QtCore/qscopedpointer.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
 QtCore/qnamespace.h
 -
 QtCore/qbytearray.h
@@ -118,7 +158,7 @@ QtCore/qbytearray.h
 QtCore/qobjectdefs.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qdatastream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
 QtCore/qscopedpointer.h
 -
 QtCore/qiodevice.h
@@ -126,7 +166,17 @@ QtCore/qiodevice.h
 QtCore/qpair.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qdebug.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
+QtCore/qstring.h
+-
+QtCore/qnamespace.h
+-
+QtCore/qshareddata.h
+-
+limits
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 QtCore/qalgorithms.h
 -
 QtCore/qhash.h
@@ -158,7 +208,17 @@ map
 utility
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qfile.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
+QtCore/qobject.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfactoryinterface.h
+QtCore/qobject.h
+-
+QtCore/qstringlist.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 QtCore/qfiledevice.h
 -
 QtCore/qstring.h
@@ -166,32 +226,30 @@ QtCore/qstring.h
 stdio.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qfiledevice.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qflags.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
 QtCore/qglobal.h
 -
 initializer_list
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qgenericatomic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
 QtCore/qglobal.h
 -
 QtCore/qtypeinfo.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
 type_traits
 -
 cstddef
 -
 utility
--
-assert.h
 -
 stddef.h
 -
@@ -226,7 +284,7 @@ QtCore/qnumeric.h
 QtCore/qversiontagging.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qglobalstatic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -234,7 +292,7 @@ QtCore/qatomic.h
 QtCore/qmutex.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qhash.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 QtCore/qchar.h
 -
 QtCore/qiterator.h
@@ -250,15 +308,15 @@ initializer_list
 algorithm
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qhashfunctions.h
-QtCore/qstring.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
+QtCore/qchar.h
 -
 QtCore/qpair.h
 -
 numeric
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qiodevice.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
 QtCore/qglobal.h
 -
 QtCore/qobject.h
@@ -270,15 +328,31 @@ QtCore/qscopedpointer.h
 QtCore/qstring.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qiterator.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qline.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h
+QtCore/qjsonvalue.h
+-
+QtCore/qiterator.h
+-
+QtCore/qpair.h
+-
+initializer_list
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h
+QtCore/qglobal.h
+-
+QtCore/qstring.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
 QtCore/qpoint.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
@@ -288,8 +362,6 @@ QtCore/qrefcount.h
 QtCore/qarraydata.h
 -
 QtCore/qhashfunctions.h
--
-QtCore/qvector.h
 -
 iterator
 -
@@ -312,7 +384,7 @@ QtCore/qbytearraylist.h
 QtCore/qstringlist.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qlocale.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
 QtCore/qvariant.h
 -
 QtCore/qstring.h
@@ -322,11 +394,11 @@ QtCore/qobjectdefs.h
 QtCore/qshareddata.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qlogging.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qmap.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 QtCore/qiterator.h
 -
 QtCore/qlist.h
@@ -346,11 +418,11 @@ functional
 initializer_list
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qmargins.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
 QtCore/qnamespace.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qmetatype.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -370,7 +442,7 @@ list
 map
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qmutex.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -382,15 +454,15 @@ chrono
 limits
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qnamespace.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qnumeric.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qobject.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
 QtCore/qobjectdefs.h
 -
 QtCore/qstring.h
@@ -410,31 +482,45 @@ QtCore/qobject_impl.h
 chrono
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qobject_impl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qobjectdefs.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
 QtCore/qnamespace.h
 -
 QtCore/qobjectdefs_impl.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qobjectdefs_impl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
 QtCore/qnamespace.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qpair.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qpoint.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qplugin.h
+QtCore/qobject.h
+-
+QtCore/qpointer.h
+-
+QtCore/qjsonobject.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
 QtCore/qnamespace.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qprocessordetection.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h
+QtCore/qsharedpointer.h
+-
+QtCore/qtypeinfo.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qrect.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
 QtCore/qmargins.h
 -
 QtCore/qsize.h
@@ -442,23 +528,23 @@ QtCore/qsize.h
 QtCore/qpoint.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qrefcount.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
 QtCore/qatomic.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qregexp.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
 QtCore/qglobal.h
 -
 QtCore/qstring.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qscopedpointer.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
 QtCore/qglobal.h
 -
 stdlib.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qset.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
 QtCore/qhash.h
 -
 initializer_list
@@ -466,7 +552,7 @@ initializer_list
 iterator
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qshareddata.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -476,7 +562,7 @@ QtCore/qhash.h
 QtCore/qhashfunctions.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qsharedpointer.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -486,7 +572,7 @@ QtCore/qshareddata.h
 QtCore/qsharedpointer_impl.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qsharedpointer_impl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
 new
 -
 QtCore/qatomic.h
@@ -498,11 +584,11 @@ QtCore/qhash.h
 QtCore/qhashfunctions.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qsize.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
 QtCore/qnamespace.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstring.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
 QtCore/qchar.h
 -
 QtCore/qbytearray.h
@@ -510,12 +596,6 @@ QtCore/qbytearray.h
 QtCore/qrefcount.h
 -
 QtCore/qnamespace.h
--
-QtCore/qstringliteral.h
--
-QtCore/qstringalgorithms.h
--
-QtCore/qstringview.h
 -
 string
 -
@@ -526,11 +606,7 @@ stdarg.h
 QtCore/qstringbuilder.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstringalgorithms.h
-QtCore/qnamespace.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstringbuilder.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
 QtCore/qstring.h
 -
 QtCore/qbytearray.h
@@ -538,7 +614,7 @@ QtCore/qbytearray.h
 string.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstringlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
 QtCore/qlist.h
 -
 QtCore/qalgorithms.h
@@ -550,31 +626,15 @@ QtCore/qstring.h
 QtCore/qstringmatcher.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstringliteral.h
-QtCore/qarraydata.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstringmatcher.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
 QtCore/qstring.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qstringview.h
-QtCore/qchar.h
--
-QtCore/qbytearray.h
--
-QtCore/qstringliteral.h
--
-QtCore/qstringalgorithms.h
--
-string
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qsysinfo.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qsystemdetection.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
 QtCore/qglobal.h
 -
 TargetConditionals.h
@@ -584,9 +644,9 @@ Availability.h
 AvailabilityMacros.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qtcore-config.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qtextstream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
@@ -600,11 +660,11 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qtypeinfo.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qurl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
 QtCore/qbytearray.h
 -
 QtCore/qobjectdefs.h
@@ -620,7 +680,7 @@ QtCore/qglobal.h
 QtCore/qurlquery.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qurlquery.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
 QtCore/qpair.h
 -
 QtCore/qshareddata.h
@@ -629,10 +689,8 @@ QtCore/qurl.h
 -
 QtCore/qstringlist.h
 -
-initializer_list
--
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qvariant.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
 QtCore/qatomic.h
 -
 QtCore/qbytearray.h
@@ -653,10 +711,8 @@ QtCore/qobject.h
 -
 QtCore/qbytearraylist.h
 -
-variant
--
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qvarlengtharray.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
 QtCore/qcontainerfwd.h
 -
 QtCore/qglobal.h
@@ -676,10 +732,12 @@ initializer_list
 iterator
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qvector.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
+-
+QtCore/qlist.h
 -
 QtCore/qrefcount.h
 -
@@ -702,11 +760,23 @@ algorithm
 QtCore/qpoint.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtCore/qversiontagging.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
 QtCore/qglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qbrush.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent
+qevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QMovie
+qmovie.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qmovie.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter
+qpainter.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 QtGui/qtguiglobal.h
 -
 QtCore/qpair.h
@@ -728,7 +798,7 @@ QtGui/qimage.h
 QtGui/qpixmap.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qcolor.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
 QtGui/qtguiglobal.h
 -
 QtGui/qrgb.h
@@ -740,7 +810,7 @@ QtCore/qstringlist.h
 QtGui/qrgba64.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qcursor.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
 QtGui/qtguiglobal.h
 -
 QtCore/qpoint.h
@@ -748,7 +818,7 @@ QtCore/qpoint.h
 QtGui/qwindowdefs.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
 QtGui/qtguiglobal.h
 -
 QtGui/qwindowdefs.h
@@ -780,7 +850,7 @@ QtGui/qvector2d.h
 QtGui/qtouchdevice.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qfont.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
 QtGui/qtguiglobal.h
 -
 QtGui/qwindowdefs.h
@@ -790,7 +860,7 @@ QtCore/qstring.h
 QtCore/qsharedpointer.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qfontinfo.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
 QtGui/qtguiglobal.h
 -
 QtGui/qfont.h
@@ -798,7 +868,7 @@ QtGui/qfont.h
 QtCore/qsharedpointer.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qfontmetrics.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
 QtGui/qtguiglobal.h
 -
 QtGui/qfont.h
@@ -808,17 +878,7 @@ QtCore/qsharedpointer.h
 QtCore/qrect.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qicon.h
-QtGui/qtguiglobal.h
--
-QtCore/qsize.h
--
-QtCore/qlist.h
--
-QtGui/qpixmap.h
--
-
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qimage.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
 QtGui/qtguiglobal.h
 -
 QtGui/qcolor.h
@@ -840,7 +900,31 @@ QtCore/qstring.h
 QtCore/qstringlist.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qkeysequence.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qimageiohandler.h
+QtGui/qtguiglobal.h
+-
+QtCore/qiodevice.h
+-
+QtCore/qplugin.h
+-
+QtCore/qfactoryinterface.h
+-
+QtCore/qscopedpointer.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qimagereader.h
+QtGui/qtguiglobal.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qcoreapplication.h
+-
+QtGui/qimage.h
+-
+QtGui/qimageiohandler.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
 QtGui/qtguiglobal.h
 -
 QtCore/qstring.h
@@ -848,7 +932,7 @@ QtCore/qstring.h
 QtCore/qobjectdefs.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qmatrix.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
 QtGui/qtguiglobal.h
 -
 QtGui/qpolygon.h
@@ -864,7 +948,19 @@ QtCore/qpoint.h
 QtCore/qrect.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qpaintdevice.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qmovie.h
+QtGui/qtguiglobal.h
+-
+QtCore/qobject.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qlist.h
+-
+QtGui/qimagereader.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
 QtGui/qtguiglobal.h
 -
 QtGui/qwindowdefs.h
@@ -872,7 +968,39 @@ QtGui/qwindowdefs.h
 QtCore/qrect.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qpainterpath.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h
+QtGui/qtguiglobal.h
+-
+QtCore/qnamespace.h
+-
+QtCore/qrect.h
+-
+QtCore/qpoint.h
+-
+QtCore/qscopedpointer.h
+-
+QtGui/qpixmap.h
+-
+QtGui/qimage.h
+-
+QtGui/qtextoption.h
+-
+QtGui/qpolygon.h
+-
+QtGui/qpen.h
+-
+QtGui/qbrush.h
+-
+QtGui/qmatrix.h
+-
+QtGui/qtransform.h
+-
+QtGui/qfontinfo.h
+-
+QtGui/qfontmetrics.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
 QtGui/qtguiglobal.h
 -
 QtGui/qmatrix.h
@@ -888,7 +1016,7 @@ QtCore/qvector.h
 QtCore/qscopedpointer.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qpalette.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
 QtGui/qtguiglobal.h
 -
 QtGui/qwindowdefs.h
@@ -898,11 +1026,19 @@ QtGui/qcolor.h
 QtGui/qbrush.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qpixelformat.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qbrush.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
 QtGui/qtguiglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qpixmap.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
 QtGui/qtguiglobal.h
 -
 QtGui/qpaintdevice.h
@@ -920,7 +1056,7 @@ QtGui/qimage.h
 QtGui/qtransform.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qpolygon.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
 QtGui/qtguiglobal.h
 -
 QtCore/qvector.h
@@ -930,7 +1066,7 @@ QtCore/qpoint.h
 QtCore/qrect.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qregion.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
 QtGui/qtguiglobal.h
 -
 QtCore/qatomic.h
@@ -942,33 +1078,43 @@ QtGui/qwindowdefs.h
 QtCore/qdatastream.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qrgb.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
 QtGui/qtguiglobal.h
 -
 QtCore/qprocessordetection.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qrgba64.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
 QtGui/qtguiglobal.h
 -
 QtCore/qprocessordetection.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qtgui-config.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
+QtGui/qtguiglobal.h
+-
+QtCore/qnamespace.h
+-
+QtCore/qchar.h
+-
+QtCore/qmetatype.h
+-
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qtguiglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
 QtCore/qglobal.h
 -
 QtGui/qtgui-config.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qtouchdevice.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
 QtGui/qtguiglobal.h
 -
 QtCore/qobject.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qtransform.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
 QtGui/qtguiglobal.h
 -
 QtGui/qmatrix.h
@@ -988,7 +1134,7 @@ QtCore/qpoint.h
 QtCore/qrect.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qvector2d.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
 QtGui/qtguiglobal.h
 -
 QtCore/qpoint.h
@@ -996,7 +1142,7 @@ QtCore/qpoint.h
 QtCore/qmetatype.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qwindowdefs.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
 QtGui/qtguiglobal.h
 -
 QtCore/qobjectdefs.h
@@ -1006,35 +1152,31 @@ QtCore/qnamespace.h
 QtGui/qwindowdefs_win.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtGui/qwindowdefs_win.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QPushButton
-qpushbutton.h
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qpushbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
+qlabel.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/QWidget
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qwidget.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qabstractbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
--
-QtGui/qicon.h
--
-QtGui/qkeysequence.h
 -
 QtWidgets/qwidget.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qpushbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtWidgets/qabstractbutton.h
+QtWidgets/qframe.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qsizepolicy.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtCore/qobject.h
@@ -1042,15 +1184,15 @@ QtCore/qobject.h
 QtCore/qalgorithms.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qtwidgets-config.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qtwidgetsglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
 QtGui/qtguiglobal.h
 -
 QtWidgets/qtwidgets-config.h
 -
 
-/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets/qwidget.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtGui/qwindowdefs.h

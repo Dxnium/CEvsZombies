@@ -17,10 +17,14 @@ using namespace std;
 gameMatrixGUI::gameMatrixGUI(QWidget *parent) : QWidget(parent) {
 
     setStyleSheet("background-color:white;");
-    leftDirection = false;
-    rightDirection = true;
-    upDirection = false;
-    downDirection = false;
+    // Source is the left-most bottom-most corner
+    Pair src = make_pair(8,0 );
+
+    // Destination is the left-most top-most corner
+    Pair dest = make_pair(0, 9);
+
+    AStar.aStarSearch(AStar.grid, src, dest);
+
     inGame = true;
     elfLabel->setAttribute(Qt::WA_TranslucentBackground);
     resize(B_WIDTH, B_HEIGHT);
@@ -52,8 +56,7 @@ void gameMatrixGUI::initGame() {
 
     x = 30;
     y = (ROW * 70)-20;
-    locateShield();
-    locateCrusader();
+
 
 
     timerId = startTimer(DELAY);
@@ -143,26 +146,26 @@ void gameMatrixGUI::checkPositions() {
         **/
     }
     if(shieldRect.intersects(gameMatrixGUIRect)){
-        locateShield();
+
     }
 }
 
 void gameMatrixGUI::move() {
-    if(shieldImg_x > x){
+    if(775 > x){
         x += DOT_SIZE;
 
     }else {
-        if(shieldImg_x == x){
+        if(775 == x){
 
         }else{
             x -= DOT_SIZE;
         }
     }
-    if(shieldImg_y > y){
+    if(20 > y){
         y += DOT_SIZE;
 
     }else {
-        if(shieldImg_y == y){
+        if(20== y){
 
         }else{
             y -= DOT_SIZE;
@@ -181,62 +184,12 @@ void gameMatrixGUI::checkCollision() {
 
 }
 
-void gameMatrixGUI::locateCrusader() {
-
-    for (int i = 0; i < 15; ++i) {
-        for(int n = 0; n<15 ; n++) {
-            int num = (rand() % 10) + 1;
-            mapMatrix[n][i] = num;
-        }
-    }
-    int counter =0;
-    for (int i = 0; i < 15; i++) {
-        for(int n = 0; n<15 ; n++) {
-            if( mapMatrix[n][i] == 7){
-
-                if(counter < 19) {
-                    /**
-                    crusaderList[counter].posX = (n * 50);
-                    crusaderList[counter].posY = (i * 50);
-                     */
-                    counter++;
-                    break;
-                }
-            }
-
-
-        }
-    }
-
-
-
-}
 int gameMatrixGUI::generateRnd(){
     int num = (rand() % 500) + 1;
     return num;
 }
 
-void gameMatrixGUI::locateShield() {
 
-
-    int randX;
-    int randY;
-    for(int i =0; i < 19; i++) {
-        randX = generateRnd();
-        randY = generateRnd();
-        /**
-        if(!crusaderList[i].crusaderRect.contains(randX, randY)) {
-            shieldRect.setRect(randX,randY,25,25);
-            shieldImg_x = randX;
-
-            shieldImg_y = randY;
-        }
-         */
-    }
-
-
-
-}
 
 void gameMatrixGUI::timerEvent(QTimerEvent *e) {
 
@@ -268,17 +221,55 @@ void gameMatrixGUI::timerEvent(QTimerEvent *e) {
             }
             x=x+DOT_SIZE;
         }
+         */
+        checkPositions();
+        checkCollision();
+        list <int> :: iterator it;
+        list <int> :: iterator it2;
+        it = AStar.XList.begin();
+        it2 = AStar.YList.begin();
+        for(int counter = 0; counter < AStar.XList.size(); counter+=2) {
+            cout<<"X1: "<< *it <<" Y1: "<< *it2 <<" X2: "<< *(++it) <<" Y2: "<< *(++it2)<<endl;
+            goTo(*it,*it2,*(++it),*(++it2));
+
+
+        }
         //move();
         repaint();
-         */
+
     }
 
 
 
 
 }
+void gameMatrixGUI::goTo(int x1, int y1, int x2, int y2 ){
+    int dx, dy, p, x_b, y_b;
+
+
+
+    p=2*dy-dx;
+    if(x<x2)
+    {
+
+        if(p>=0)
+        {
+            //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
+            y=y+DOT_SIZE;
+            p=p+2*dy-2*dx;
+        }
+        else
+        {
+            //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
+            p=p+2*dy;
+        }
+        x=x+DOT_SIZE;
+    }
+}
 
 void gameMatrixGUI::mouseDoubleClickEvent(QMouseEvent *event) {
+
     x = event->x();
     y= event->y();
+    cout<<"X: "<< event->x() << " Y: "<< event->y()<<endl;
 };

@@ -74,6 +74,15 @@ void AStarAlgthm::tracePath(cell cellDetails[][COL], Pair dest)
         pair<int,int> p = Path.top();
         Path.pop();
         printf("-> (%d,%d) ",p.first,p.second);
+        YList.push_back((p.first*75)+20);
+        XList.push_back((p.second*75)+100);
+
+    }
+    for (int n : XList) {
+        std::cout <<"X: "<< n << '\n';
+    }
+    for (int c : YList) {
+        std::cout <<"Y: "<< c << '\n';
     }
 
     return;

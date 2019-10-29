@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/GUI/StartWindow.cpp" "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/GUI/StartWindow.cpp.o"
-  "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/main.cpp" "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/main.cpp.o"
+  "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/AStarAlgthm.cpp" "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/GUI/AStarAlgthm.cpp.o"
+  "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/GUI/gameMatrixGUI.cpp" "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/GUI/gameMatrixGUI.cpp.o"
+  "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/main.cpp" "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/cmake-build-debug/CMakeFiles/CEvsZombies.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,11 +19,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/danium/Qt/5.13.0/gcc_64/include"
-  "/home/danium/Qt/5.13.0/gcc_64/include/QtCore"
-  "/home/danium/Qt/5.13.0/gcc_64/./mkspecs/linux-g++"
-  "/home/danium/Qt/5.13.0/gcc_64/include/QtGui"
-  "/home/danium/Qt/5.13.0/gcc_64/include/QtWidgets"
+  "/usr/include/x86_64-linux-gnu/qt5"
+  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
+  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
+  "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   )
 
 # Targets to which this target links.

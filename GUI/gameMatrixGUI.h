@@ -76,8 +76,6 @@ class gameMatrixGUI : public QWidget {
         QRect shieldRect;
         void loadImages();
         void initGame();
-        void locateCrusader();
-        void locateShield();
         void checkPositions();
         void checkCollision();
         void move();
@@ -85,7 +83,7 @@ class gameMatrixGUI : public QWidget {
         void gameOver(QPainter &);
         void getDimensions(int , int);
         int generateRnd();
-
+        void goTo(int, int, int, int);
         void mouseDoubleClickEvent(QMouseEvent *event);
 };
 
