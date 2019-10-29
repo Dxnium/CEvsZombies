@@ -54,10 +54,8 @@ void gameMatrixGUI::loadImages() {
 void gameMatrixGUI::initGame() {
 
 
-    x = 30;
+    x =100;
     y = (ROW * 70)-20;
-
-
 
     timerId = startTimer(DELAY);
 }
@@ -151,26 +149,47 @@ void gameMatrixGUI::checkPositions() {
 }
 
 void gameMatrixGUI::move() {
-    if(775 > x){
-        x += DOT_SIZE;
 
-    }else {
-        if(775 == x){
+        //cout << "X1: " << AStar.XList[counter]<< " Y1: " << AStar.YList[counter] << " X2: " << AStar.XList[counter+1] << " Y2: " << AStar.YList[counter+1] << endl;
+        if(AStar.XList.size() == counter){
+            x =100;
+            y = (ROW * 70)-20;
+            counter =1;
+            arrivedX = false;
+            arrivedY = false;
+        }else {
+            if (arrivedX == true && arrivedY == true) {
+                counter++;
+                arrivedX = false;
+                arrivedY = false;
 
-        }else{
-            x -= DOT_SIZE;
+            } else {
+                cout << "DestX: " << AStar.XList[counter] << "DestY: " << AStar.YList[counter] << endl;
+                if (AStar.XList[counter] > x) {
+                    x += DOT_SIZE;
+
+                } else {
+                    if (AStar.XList[counter] == x) {
+                        cout << "Hola22123" << endl;
+                        arrivedX = true;
+                    } else {
+                        x -= DOT_SIZE;
+                    }
+                }
+                if (AStar.YList[counter] > y) {
+                    y += DOT_SIZE;
+
+                } else {
+                    if (AStar.YList[counter] == y) {
+                        cout << "Hola7777" << endl;
+                        arrivedY = true;
+                    } else {
+                        y -= DOT_SIZE;
+                    }
+                }
+            }
+
         }
-    }
-    if(20 > y){
-        y += DOT_SIZE;
-
-    }else {
-        if(20== y){
-
-        }else{
-            y -= DOT_SIZE;
-        }
-    }
 
 
 }
@@ -196,45 +215,9 @@ void gameMatrixGUI::timerEvent(QTimerEvent *e) {
     Q_UNUSED(e);
 
     if (inGame) {
-        /*
         checkPositions();
         checkCollision();
-        int dx, dy, p, x_b, y_b;
-
-        dx=shieldImg_x-x;
-        dy=shieldImg_y-y;
-
-        p=2*dy-dx;
-        if(x<shieldImg_x)
-        {
-
-            if(p>=0)
-            {
-                //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
-                y=y+DOT_SIZE;
-                p=p+2*dy-2*dx;
-            }
-            else
-            {
-                //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
-                p=p+2*dy;
-            }
-            x=x+DOT_SIZE;
-        }
-         */
-        checkPositions();
-        checkCollision();
-        list <int> :: iterator it;
-        list <int> :: iterator it2;
-        it = AStar.XList.begin();
-        it2 = AStar.YList.begin();
-        for(int counter = 0; counter < AStar.XList.size(); counter+=2) {
-            cout<<"X1: "<< *it <<" Y1: "<< *it2 <<" X2: "<< *(++it) <<" Y2: "<< *(++it2)<<endl;
-            goTo(*it,*it2,*(++it),*(++it2));
-
-
-        }
-        //move();
+        move();
         repaint();
 
     }
