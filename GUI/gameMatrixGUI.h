@@ -35,7 +35,7 @@ class gameMatrixGUI : public QWidget {
 
         QImage shieldImg;
 
-        QMovie *elfMovie = new QMovie("/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/elf.gif");
+        QMovie *elfMovie = new QMovie("/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/elf.gif");
         QLabel *elfLabel = new QLabel(this);
 
 
