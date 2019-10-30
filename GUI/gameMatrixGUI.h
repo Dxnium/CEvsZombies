@@ -47,7 +47,7 @@ class gameMatrixGUI : public QWidget {
 
         static const int B_WIDTH = 1000;
         static const int B_HEIGHT = 800;
-        static const int DOT_SIZE = 10;
+        static const int DOT_SIZE = 5;
         static const int ALL_DOTS = 900;
         static const int RAND_POS = 50;
         static const int DELAY = 140;
@@ -66,7 +66,9 @@ class gameMatrixGUI : public QWidget {
         bool upDirection;
         bool downDirection;
         bool inGame;
-
+        int counter = 1;
+        bool arrivedX= false;
+        bool arrivedY= false;
         int dimX =0;
         int dimY=0;
         int maxDivX  = 0;
