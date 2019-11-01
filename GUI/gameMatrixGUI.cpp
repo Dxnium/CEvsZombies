@@ -4,7 +4,6 @@
 
 #include "gameMatrixGUI.h"
 #include "gameMatrixGUI.h"
-#include "../GA/Zombies.h"
 
 #include <QPainter>
 #include <QTime>
@@ -12,8 +11,6 @@
 #include<bits/stdc++.h>
 #include <random>
 //#include "Bresenham.h"
-
-
 using namespace std;
 
 
@@ -60,7 +57,7 @@ void gameMatrixGUI::initGame() {
     x =100;
     y = (ROW * 70)-20;
 
-    //timerId = startTimer(DELAY);
+    timerId = startTimer(DELAY);
 }
 
 void gameMatrixGUI::paintEvent(QPaintEvent *e) {
@@ -193,6 +190,8 @@ void gameMatrixGUI::move() {
             }
 
         }
+
+
 }
 
 void gameMatrixGUI::checkCollision() {
@@ -203,7 +202,6 @@ void gameMatrixGUI::checkCollision() {
     }
 
 }
-
 
 int gameMatrixGUI::generateRnd(){
     int num = (rand() % 500) + 1;
@@ -228,6 +226,29 @@ void gameMatrixGUI::timerEvent(QTimerEvent *e) {
 
 
 }
+void gameMatrixGUI::goTo(int x1, int y1, int x2, int y2 ){
+    int dx, dy, p, x_b, y_b;
+
+
+
+    p=2*dy-dx;
+    if(x<x2)
+    {
+
+        if(p>=0)
+        {
+            //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
+            y=y+DOT_SIZE;
+            p=p+2*dy-2*dx;
+        }
+        else
+        {
+            //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
+            p=p+2*dy;
+        }
+        x=x+DOT_SIZE;
+    }
+}
 
 void gameMatrixGUI::mouseDoubleClickEvent(QMouseEvent *event) {
 
@@ -235,30 +256,3 @@ void gameMatrixGUI::mouseDoubleClickEvent(QMouseEvent *event) {
     y= event->y();
     cout<<"X: "<< event->x() << " Y: "<< event->y()<<endl;
 };
-
-
-
-
-//void gameMatrixGUI::goTo(int x1, int y1, int x2, int y2 ){
-//    int dx, dy, p, x_b, y_b;
-//
-//
-//
-//    p=2*dy-dx;
-//    if(x<x2)
-//    {
-//
-//        if(p>=0)
-//        {
-//            //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
-//            y=y+DOT_SIZE;
-//            p=p+2*dy-2*dx;
-//        }
-//        else
-//        {
-//            //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
-//            p=p+2*dy;
-//        }
-//        x=x+DOT_SIZE;
-//    }
-//}
