@@ -265,10 +265,8 @@ void gameMatrixGUI::Action() {
     setStyleSheet("background-color:white;");
     // Source is the left-most bottom-most corner
     Pair src = make_pair(8,0 );
-
     // Destination is the left-most top-most corner
     Pair dest = make_pair(0, 9);
-
     AStar.aStarSearch(AStar.grid, src, dest);
 
     inGame = true;

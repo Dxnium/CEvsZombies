@@ -7,8 +7,9 @@
 
 #include <QWidget>
 class StartWindow : public QWidget{
+
 public:
-    StartWindow(QWidget *parent=0);
+ StartWindow(QWidget *parent=0);
 
     void Action();
 
