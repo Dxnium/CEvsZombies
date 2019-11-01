@@ -13,20 +13,23 @@
 #include <QtWidgets/QLabel>
 //#include "crusader.h"
 #include <QMovie>
+#include <QtWidgets/QPushButton>
 #include "AStarAlgthm.h"
+#include "StartWindow.h"
+
 class gameMatrixGUI : public QWidget {
 
     public:
         gameMatrixGUI(QWidget *parent = 0);
         AStarAlgthm AStar;
-
-
-
+        QPushButton *btn_Infinity = new QPushButton("Modo 1",this);
+        QPushButton *btn_noInfinity = new QPushButton("Modo2",this);
 
     protected:
         void paintEvent(QPaintEvent *);
         void timerEvent(QTimerEvent *);
         void drawLines(QPainter *qp);
+
 
 
     private:
@@ -38,13 +41,13 @@ class gameMatrixGUI : public QWidget {
         QMovie *elfMovie = new QMovie("/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/elf.gif");
         QLabel *elfLabel = new QLabel(this);
 
-
+        QLabel *textLabel;
 
         //crusader crusaderList[19];
         static const int filas = 15;
         static const int columnas = 15;
         int mapMatrix[columnas][filas];
-
+        bool appear = false;
         static const int B_WIDTH = 1000;
         static const int B_HEIGHT = 800;
         static const int DOT_SIZE = 5;
@@ -87,6 +90,9 @@ class gameMatrixGUI : public QWidget {
         int generateRnd();
         void goTo(int, int, int, int);
         void mouseDoubleClickEvent(QMouseEvent *event);
+
+    private slots:
+        void Action();
 };
 
 
