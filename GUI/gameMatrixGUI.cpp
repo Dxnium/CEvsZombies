@@ -10,27 +10,26 @@
 #include <iostream>
 #include<bits/stdc++.h>
 #include <random>
+#include <QtWidgets/QApplication>
 //#include "Bresenham.h"
 using namespace std;
 
 
 gameMatrixGUI::gameMatrixGUI(QWidget *parent) : QWidget(parent) {
 
-    setStyleSheet("background-color:white;");
-    // Source is the left-most bottom-most corner
-    Pair src = make_pair(8,0 );
+    resize(600, 500);
+    textLabel = new QLabel("Modos de juego: ", this);
+    textLabel->setGeometry(200,100,150,50);
+    btn_Infinity->setStyleSheet("background-color: rgb(181,56,56);border: none; ");
+    btn_Infinity->setGeometry(200,200,200,20);
+    connect(btn_Infinity, &QPushButton::clicked, this, &gameMatrixGUI::Action);
 
-    // Destination is the left-most top-most corner
-    Pair dest = make_pair(0, 9);
 
-    AStar.aStarSearch(AStar.grid, src, dest);
 
-    inGame = true;
-    elfLabel->setAttribute(Qt::WA_TranslucentBackground);
-    resize(B_WIDTH, B_HEIGHT);
-    //getDimensions(B_WIDTH,B_HEIGHT);
-    loadImages();
-    initGame();
+    btn_noInfinity->setStyleSheet("background-color: rgb(0,147,56);border: none; ");
+    btn_noInfinity->setGeometry(200,300,200,20);
+    connect(btn_noInfinity, &QPushButton::clicked, this, &gameMatrixGUI::Action);
+
 
 }
 
@@ -63,7 +62,9 @@ void gameMatrixGUI::initGame() {
 void gameMatrixGUI::paintEvent(QPaintEvent *e) {
 
     Q_UNUSED(e);
-    doDrawing();
+    if(appear) {
+        doDrawing();
+    }
 }
 void gameMatrixGUI::getDimensions(int dimX, int dimY) {
 
@@ -256,3 +257,24 @@ void gameMatrixGUI::mouseDoubleClickEvent(QMouseEvent *event) {
     y= event->y();
     cout<<"X: "<< event->x() << " Y: "<< event->y()<<endl;
 };
+void gameMatrixGUI::Action() {
+    appear = true;
+    btn_Infinity->hide();
+    btn_noInfinity->hide();
+    textLabel->hide();
+    setStyleSheet("background-color:white;");
+    // Source is the left-most bottom-most corner
+    Pair src = make_pair(8,0 );
+
+    // Destination is the left-most top-most corner
+    Pair dest = make_pair(0, 9);
+
+    AStar.aStarSearch(AStar.grid, src, dest);
+
+    inGame = true;
+    elfLabel->setAttribute(Qt::WA_TranslucentBackground);
+    resize(B_WIDTH, B_HEIGHT);
+    //getDimensions(B_WIDTH,B_HEIGHT);
+    loadImages();
+    initGame();
+}
