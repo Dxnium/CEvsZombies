@@ -4,13 +4,9 @@
 
 #include "Zombies.h"
 #include <iostream>
-Zombies::Zombies(int vida , int defense,QWidget *parent) : QLabel(parent) {
-    setMovie(elfMovie);
-    setAttribute(Qt::WA_TranslucentBackground);
-}
-
-Zombies::~Zombies(void){
-    std::cout<<"deleting"<<std::endl;
+Zombies::Zombies(int vida , int defense) {
+    this->vida = vida;
+    this->defense=defense;
 }
 
 int Zombies::getposX() {

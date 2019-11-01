@@ -9,16 +9,17 @@
 #include <QLabel>
 #include <QMovie>
 
-class Zombies : public QLabel{
+class Zombies{
 public:
     //Constructor
-    Zombies(int vida, int defense, QWidget *parent=0);
+    Zombies(int vida, int defense);
 
     //Caracteristicas
     int vida;
     int defense;
     int x;
     int y;
+    int fitness;
 
     //Movie for the label
     QMovie *elfMovie = new QMovie("/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/elf.gif");
@@ -28,9 +29,6 @@ public:
     int getposY();
     void setposX(int x);
     void setposY(int y);
-
-    //Destructor
-    ~Zombies();
 
 
 };

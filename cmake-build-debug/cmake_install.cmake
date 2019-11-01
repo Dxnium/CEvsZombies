@@ -1,4 +1,4 @@
-# Install script for directory: /home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies
+# Install script for directory: /home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

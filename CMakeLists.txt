@@ -8,7 +8,7 @@
     find_package(Qt5Core REQUIRED)
     find_package(Qt5Gui REQUIRED)
     find_package(Qt5Widgets REQUIRED)
-    set(SOURCE_FILES main.cpp GUI/AStarAlgthm.cpp GUI/AStarAlgthm.h GUI/gameMatrixGUI.cpp GUI/gameMatrixGUI.h)
+    set(SOURCE_FILES main.cpp GUI/AStarAlgthm.cpp GUI/AStarAlgthm.h GUI/gameMatrixGUI.cpp GUI/gameMatrixGUI.h GA/Zombies.cpp GA/Zombies.h GA/Genetic.cpp GA/Genetic.h)
     add_executable(CEvsZombies ${SOURCE_FILES})
 
     # specify which libraries to connect
