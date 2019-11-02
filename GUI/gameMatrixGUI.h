@@ -54,7 +54,8 @@ private:
     static const int columnas = 15;
     int mapMatrix[columnas][filas];
     bool appear = false;
-
+    bool visible = false;
+    int counterArrivals = 0;
     static const int B_WIDTH = 1000;
     static const int B_HEIGHT = 800;
     static const int DOT_SIZE = 5;
@@ -84,6 +85,7 @@ private:
     int maxDivX = 0;
     int maxDivY = 0;
     int squareSize = 75;
+    int countingProb = 1;
     QRect gameMatrixGUIRect;
     QRect shieldRect;
 

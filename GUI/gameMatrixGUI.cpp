@@ -105,15 +105,18 @@ void gameMatrixGUI::doDrawing() {
 
         qp.drawImage(x, y, gameMatrixGUIImg);
         */
-        zombiesList[0]->moving = true;
-        for (int pos = 0; pos < 10; pos++) {
-            if (zombiesList[pos - 1]->y < 600) {
-                zombiesList[pos]->moving = true;
+        if(startGame && visible) {
+            zombiesList[0]->moving = true;
+            for (int pos = 0; pos < 10; pos++) {
+                if (zombiesList[pos - 1]->y < 600) {
+                    zombiesList[pos]->moving = true;
+
+                }
+
 
             }
-
-
-        }paint_buttons();
+        }
+        paint_buttons();
 
     } else {
 
@@ -160,11 +163,29 @@ void gameMatrixGUI::move() {
         if (zombiesList[i]->moving) {
 
             if (AStar.XList.size() == zombiesList[i]->counterPos) {
+
+                visible = false;
                 zombiesList[i]->x = 100;
                 zombiesList[i]->y = (ROW * 70) - 20;
+
                 zombiesList[i]->counterPos = 1;
                 zombiesList[i]->arrivedX = false;
                 zombiesList[i]->arrivedY = false;
+                zombiesList[i]->moving = false;
+                labelList[i]->hide();
+                if(i ==9){
+                    pts = 100;
+                    std::string s = to_string(pts);
+                    QString str = QString::fromUtf8(s.c_str());
+                    puntos->setText(str);
+                    AStar.XList.clear();
+                    AStar.YList.clear();
+                    startGame= false;
+
+                }
+
+
+
             } else {
                 if (zombiesList[i]->arrivedX == true && zombiesList[i]->arrivedY == true) {
                     zombiesList[i]->counterPos++;
@@ -196,10 +217,13 @@ void gameMatrixGUI::move() {
                         }
                     }
                 }
+                labelList[i]->setGeometry(zombiesList[i]->x, zombiesList[i]->y, 100, 100);
+                labelList[i]->show();
 
             }
-            labelList[i]->setGeometry(zombiesList[i]->x, zombiesList[i]->y, 100, 100);
-            labelList[i]->show();
+
+
+
         }
 
     }
@@ -366,11 +390,14 @@ void gameMatrixGUI::refresh_matriz(int x, int y) {
 
 void gameMatrixGUI::Start() {
     startGame = true;
+    visible = true;
     // Source is the left-most bottom-most corner
+
     Pair src = make_pair(8, 0);
 
     // Destination is the left-most top-most corner
     Pair dest = make_pair(0, 9);
 
     AStar.aStarSearch(AStar.grid, src, dest);
+
 }
