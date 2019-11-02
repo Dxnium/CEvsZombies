@@ -15,6 +15,7 @@
 #include <QtWidgets/QPushButton>
 #include "AStarAlgthm.h"
 #include "StartWindow.h"
+#include "../GA/Zombies.h"
 
 class gameMatrixGUI : public QWidget {
 
@@ -43,6 +44,11 @@ private:
     QLabel *elfLabel = new QLabel(this);
 
     QLabel *textLabel;
+
+    QLabel *labelList[10];
+
+
+    Zombies *zombiesList[10];
 
     //crusader crusaderList[19];
     static const int filas = 15;
@@ -117,11 +123,15 @@ private:
     void mousePressEvent(QMouseEvent *event);
     void refresh_matriz(int x, int y);
 
+    //----------------------------------
+
+
 
 private slots:
 
     void Action();
 
 
+    void fillArray();
 };
 

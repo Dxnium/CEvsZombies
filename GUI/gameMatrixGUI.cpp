@@ -108,8 +108,15 @@ void gameMatrixGUI::doDrawing() {
 
         qp.drawImage(x, y, gameMatrixGUIImg);
         */
-        elfLabel->setGeometry(x, y, 100, 100);
-        paint_buttons();
+        zombiesList[0]->moving = true;
+        for (int pos = 0; pos < 10; pos++) {
+            if (zombiesList[pos - 1]->y < 600) {
+                zombiesList[pos]->moving = true;
+
+            }
+
+
+        }paint_buttons();
 
     } else {
 
@@ -152,49 +159,57 @@ void gameMatrixGUI::checkPositions() {
 
 void gameMatrixGUI::move() {
 
-    //cout << "X1: " << AStar.XList[counter]<< " Y1: " << AStar.YList[counter] << " X2: " << AStar.XList[counter+1] << " Y2: " << AStar.YList[counter+1] << endl;
-    if (AStar.XList.size() == counter) {
-        x = 100;
-        y = (ROW * 70) - 20;
-        counter = 1;
-        arrivedX = false;
-        arrivedY = false;
-    } else {
-        if (arrivedX == true && arrivedY == true) {
-            counter++;
-            arrivedX = false;
-            arrivedY = false;
+    for (int i = 0; i < 10; i++) {
+        if (zombiesList[i]->moving) {
 
-        } else {
-            cout << "DestX: " << AStar.XList[counter] << "DestY: " << AStar.YList[counter] << endl;
-            if (AStar.XList[counter] > x) {
-                x += DOT_SIZE;
-
+            if (AStar.XList.size() == zombiesList[i]->counterPos) {
+                zombiesList[i]->x = 100;
+                zombiesList[i]->y = (ROW * 70) - 20;
+                zombiesList[i]->counterPos = 1;
+                zombiesList[i]->arrivedX = false;
+                zombiesList[i]->arrivedY = false;
             } else {
-                if (AStar.XList[counter] == x) {
-                    cout << "Hola22123" << endl;
-                    arrivedX = true;
-                } else {
-                    x -= DOT_SIZE;
-                }
-            }
-            if (AStar.YList[counter] > y) {
-                y += DOT_SIZE;
+                if (zombiesList[i]->arrivedX == true && zombiesList[i]->arrivedY == true) {
+                    zombiesList[i]->counterPos++;
+                    zombiesList[i]->arrivedX = false;
+                    zombiesList[i]->arrivedY = false;
 
-            } else {
-                if (AStar.YList[counter] == y) {
-                    cout << "Hola7777" << endl;
-                    arrivedY = true;
                 } else {
-                    y -= DOT_SIZE;
+                    //cout << "DestX: " << AStar.XList[counter] << "DestY: " << AStar.YList[counter] << endl;
+                    if (AStar.XList[zombiesList[i]->counterPos] > labelList[i]->x()) {
+                        zombiesList[i]->x += DOT_SIZE;
+
+                    } else {
+                        if (AStar.XList[zombiesList[i]->counterPos] == labelList[i]->x()) {
+                            //cout << "Hola22123" << endl;
+                            zombiesList[i]->arrivedX = true;
+                        } else {
+                            zombiesList[i]->x -= DOT_SIZE;
+                        }
+                    }
+                    if (AStar.YList[zombiesList[i]->counterPos] > labelList[i]->y()) {
+                        zombiesList[i]->y += DOT_SIZE;
+
+                    } else {
+                        if (AStar.YList[zombiesList[i]->counterPos] == labelList[i]->y()) {
+                            //cout << "Hola7777" << endl;
+                            zombiesList[i]->arrivedY = true;
+                        } else {
+                            zombiesList[i]->y -= DOT_SIZE;
+                        }
+                    }
                 }
+
             }
+            labelList[i]->setGeometry(zombiesList[i]->x, zombiesList[i]->y, 100, 100);
+            labelList[i]->show();
         }
 
     }
 
 
 }
+
 
 void gameMatrixGUI::checkCollision() {
 
@@ -270,9 +285,34 @@ void gameMatrixGUI::Action() {
     elfLabel->setAttribute(Qt::WA_TranslucentBackground);
     resize(B_WIDTH, B_HEIGHT);
     //getDimensions(B_WIDTH,B_HEIGHT);
+    fillArray();
     loadImages();
     create_Buttons();
     initGame();
+}
+
+void gameMatrixGUI::fillArray() {
+    QMovie *elfMovie = new QMovie(
+            "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/elf.gif");
+    QMovie *purpleElf = new QMovie(
+            "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/purpleElf.gif");
+    for (int i = 0; i < 10; i++) {
+        zombiesList[i] = new Zombies();
+        if (i % 2 == 0) {
+            labelList[i] = new QLabel(this);
+            labelList[i]->setAttribute(Qt::WA_TranslucentBackground);
+            labelList[i]->setMovie(elfMovie);
+            elfMovie->start();
+        } else {
+            labelList[i] = new QLabel(this);
+            labelList[i]->setAttribute(Qt::WA_TranslucentBackground);
+            labelList[i]->setMovie(purpleElf);
+            purpleElf->start();
+
+        }
+    }
+
+
 }
 
 void gameMatrixGUI::create_Buttons() {
@@ -287,7 +327,7 @@ void gameMatrixGUI::paint_buttons() {
     button->setGeometry(900, 50, squareSize, squareSize);
     button1->setGeometry(900, 175, squareSize, squareSize);
     button2->setGeometry(900, 300, squareSize, squareSize);
-    puntos->setGeometry(900,400,squareSize,squareSize);
+    puntos->setGeometry(900, 400, squareSize, squareSize);
 }
 
 
@@ -316,9 +356,9 @@ void gameMatrixGUI::mousePressEvent(QMouseEvent *event) {
 void gameMatrixGUI::refresh_matriz(int x, int y) {
     for (int row = 0; row < 9; row++) {
         for (int col = 0; col < 10; col++) {
-            if (x == row and y == col and pts!=0) {
+            if (x == row and y == col and pts != 0) {
                 AStar.grid[col][row] = 0;
-                pts-=20;
+                pts -= 20;
                 std::string s = to_string(pts);
                 QString str = QString::fromUtf8(s.c_str());
                 puntos->setText(str);

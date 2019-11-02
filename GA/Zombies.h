@@ -9,13 +9,16 @@
 class Zombies {
 public:
     int vida;
-    Zombies(int i, int i1);
+    int counterPos =1;
+    int x=100;
+    int y= (9 * 70)-20;
+    bool moving = false;
+    bool arrivedX= false;
+    bool arrivedY= false;
+    Zombies();
     ~Zombies();
-
-    int fitness;
-    int y;
-    int x;
 };
+
 
 
 #endif //CEVSZOMBIES_ZOMBIES_H
