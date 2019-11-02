@@ -337,9 +337,9 @@ void gameMatrixGUI::Action() {
 
 void gameMatrixGUI::fillArray() {
     QMovie *elfMovie = new QMovie(
-            "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/elf.gif");
+            "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/elf.gif");
     QMovie *purpleElf = new QMovie(
-            "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/purpleElf.gif");
+            "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/purpleElf.gif");
     for (int i = 0; i < 10; i++) {
         zombiesList[i] = new Zombies();
         if (i % 2 == 0) {
@@ -427,4 +427,14 @@ void gameMatrixGUI::Start() {
 
     AStar.aStarSearch(AStar.grid, src, dest);
 
+    for(int i=0;i<10;i++){
+        zombiesList[0]->vida = random_num(0,100);
+    }
+
+}
+
+int gameMatrixGUI::random_num(int start, int end) {
+    int range = (end-start)+1;
+    int random_int = start+(rand()%range);
+    return random_int;
 }

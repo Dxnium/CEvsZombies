@@ -16,6 +16,7 @@
 #include "AStarAlgthm.h"
 #include "StartWindow.h"
 #include "../GA/Zombies.h"
+#include <bits/stdc++.h>
 
 class gameMatrixGUI : public QWidget {
 
@@ -129,6 +130,8 @@ private:
     void refresh_matriz(int x, int y);
 
     bool startGame = false;
+
+    int random_num(int start, int end);
 
     //----------------------------------
 
