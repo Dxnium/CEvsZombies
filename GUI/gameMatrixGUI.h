@@ -40,8 +40,7 @@ private:
 
     QImage shieldImg;
 
-    QMovie *elfMovie = new QMovie("/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/elf.gif");
-    QLabel *elfLabel = new QLabel(this);
+
 
     QLabel *textLabel;
 
@@ -55,6 +54,7 @@ private:
     static const int columnas = 15;
     int mapMatrix[columnas][filas];
     bool appear = false;
+
     static const int B_WIDTH = 1000;
     static const int B_HEIGHT = 800;
     static const int DOT_SIZE = 5;
@@ -126,7 +126,7 @@ private:
     void mousePressEvent(QMouseEvent *event);
     void refresh_matriz(int x, int y);
 
-    bool condition = true;
+    bool startGame = false;
 
     //----------------------------------
 
@@ -137,4 +137,3 @@ private slots:
     void Start();
     void fillArray();
 };
-

@@ -31,8 +31,7 @@ gameMatrixGUI::gameMatrixGUI(QWidget *parent) : QWidget(parent) {
 }
 
 void gameMatrixGUI::loadImages() {
-    elfLabel->setMovie(elfMovie);
-    elfMovie->start();
+
     //gameMatrixGUIImg.load("/home/smz/CLionProjects/pathfinding/Images/helmet.png");
     /*
     for(int i= 0; i<19; i++) {
@@ -231,7 +230,9 @@ void gameMatrixGUI::timerEvent(QTimerEvent *e) {
     if (inGame) {
         checkPositions();
         checkCollision();
-        move();
+        if(startGame) {
+            move();
+        }
         repaint();
 
     }
@@ -275,7 +276,6 @@ void gameMatrixGUI::Action() {
 
     inGame = true;
 
-    elfLabel->setAttribute(Qt::WA_TranslucentBackground);
     resize(B_WIDTH, B_HEIGHT);
     //getDimensions(B_WIDTH,B_HEIGHT);
     fillArray();
@@ -286,9 +286,9 @@ void gameMatrixGUI::Action() {
 
 void gameMatrixGUI::fillArray() {
     QMovie *elfMovie = new QMovie(
-            "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/elf.gif");
+            "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/elf.gif");
     QMovie *purpleElf = new QMovie(
-            "/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/purpleElf.gif");
+            "/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/purpleElf.gif");
     for (int i = 0; i < 10; i++) {
         zombiesList[i] = new Zombies();
         if (i % 2 == 0) {
@@ -365,7 +365,7 @@ void gameMatrixGUI::refresh_matriz(int x, int y) {
 }
 
 void gameMatrixGUI::Start() {
-
+    startGame = true;
     // Source is the left-most bottom-most corner
     Pair src = make_pair(8, 0);
 
