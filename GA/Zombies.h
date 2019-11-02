@@ -6,9 +6,12 @@
 #define CEVSZOMBIES_ZOMBIES_H
 
 
+#include <QtCore/QRect>
+
 class Zombies {
 public:
     int vida;
+    QRect zombieRect;
     int counterPos =1;
     int x=100;
     int y= (9 * 70)-20;

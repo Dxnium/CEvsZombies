@@ -79,10 +79,24 @@ void gameMatrixGUI::doDrawing() {
     qp.setPen(pen);
     for (int c = 0; c < COL; c++) {
         for (int f = 0; f < ROW; f++) {
+
             if (AStar.grid[f][c] == 1) {
                 qp.drawRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize);
             } else {
+                QRect obstacleRect;
+                obstacleRect.setRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize);
+                for(int n =0; n<10; n++) {
+                    if (zombiesList[n]->zombieRect.intersects(obstacleRect)) {
+                        if(zombiesList[n]->vida != 0){
+                            zombiesList[n]->vida-=1;
+                        }else{
+                            zombiesList[n]->moving = false;
+                            labelList[n]->hide();
+                            visible = false;
 
+                        }
+                    }
+                }
                 qp.fillRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize, Qt::green);
                 qp.drawRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize);
             }
@@ -104,17 +118,29 @@ void gameMatrixGUI::doDrawing() {
         qp.fillRect(x+20,y,30,squareSize,Qt::cyan);
 
         qp.drawImage(x, y, gameMatrixGUIImg);
+
         */
+        if(startGame){
+            for (int i = 0; i < 10; i++) {
+
+                qp.fillRect(zombiesList[i]->x+10, zombiesList[i]->y+30, 35, 55, Qt::cyan);
+
+
+            }
+
+        }
         if(startGame && visible) {
             zombiesList[0]->moving = true;
+
             for (int pos = 0; pos < 10; pos++) {
-                if (zombiesList[pos - 1]->y < 600) {
+                if (zombiesList[pos - 1]->y  < 600 || zombiesList[pos - 1]->x > 150) {
                     zombiesList[pos]->moving = true;
 
                 }
 
 
             }
+
         }
         paint_buttons();
 
@@ -217,6 +243,7 @@ void gameMatrixGUI::move() {
                         }
                     }
                 }
+                zombiesList[i]->zombieRect.setRect(zombiesList[i]->x+10, zombiesList[i]->y+30, 35, 55);
                 labelList[i]->setGeometry(zombiesList[i]->x, zombiesList[i]->y, 100, 100);
                 labelList[i]->show();
 
