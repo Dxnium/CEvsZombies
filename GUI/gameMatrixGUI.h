@@ -17,6 +17,8 @@
 #include "AStarAlgthm.h"
 #include "StartWindow.h"
 
+#include "../GA/Zombies.h"
+
 class gameMatrixGUI : public QWidget {
 
     public:
@@ -38,11 +40,10 @@ class gameMatrixGUI : public QWidget {
 
         QImage shieldImg;
 
-        QMovie *elfMovie = new QMovie("/home/smz/TEC/Algoritmos y Estructuras de Datos II/Proyectos Datos II/CEvsZombies/Images/elf.gif");
-        QLabel *elfLabel = new QLabel(this);
+        QLabel *labelList[10];
 
         QLabel *textLabel;
-
+        Zombies *zombiesList[10];
         //crusader crusaderList[19];
         static const int filas = 15;
         static const int columnas = 15;
@@ -54,7 +55,7 @@ class gameMatrixGUI : public QWidget {
         static const int ALL_DOTS = 900;
         static const int RAND_POS = 50;
         static const int DELAY = 140;
-
+        int index = 0;
         int timerId;
         int dots;
         int crusaderImg_x;
@@ -69,9 +70,8 @@ class gameMatrixGUI : public QWidget {
         bool upDirection;
         bool downDirection;
         bool inGame;
-        int counter = 1;
-        bool arrivedX= false;
-        bool arrivedY= false;
+        int counterTurn = 1;
+
         int dimX =0;
         int dimY=0;
         int maxDivX  = 0;
@@ -90,7 +90,7 @@ class gameMatrixGUI : public QWidget {
         int generateRnd();
         void goTo(int, int, int, int);
         void mouseDoubleClickEvent(QMouseEvent *event);
-
+        void fillArray();
     private slots:
         void Action();
 };

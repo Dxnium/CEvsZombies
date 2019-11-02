@@ -9,6 +9,12 @@
 class Zombies {
 public:
     int vida;
+    int counterPos =1;
+    int x=100;
+    int y= (9 * 70)-20;
+    bool moving = false;
+    bool arrivedX= false;
+    bool arrivedY= false;
     Zombies();
     ~Zombies();
 };
