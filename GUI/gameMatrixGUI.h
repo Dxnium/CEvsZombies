@@ -120,18 +120,21 @@ private:
     QLabel *button = new QLabel(this);
     QLabel *button1 = new QLabel(this);
     QLabel *button2 = new QLabel(this);
+    QPushButton *btn = new QPushButton("Start", this);
+
+
     void mousePressEvent(QMouseEvent *event);
     void refresh_matriz(int x, int y);
+
+    bool condition = true;
 
     //----------------------------------
 
 
 
 private slots:
-
     void Action();
-
-
+    void Start();
     void fillArray();
 };
 

@@ -28,8 +28,6 @@ gameMatrixGUI::gameMatrixGUI(QWidget *parent) : QWidget(parent) {
     btn_noInfinity->setStyleSheet("background-color: rgb(0,147,56);border: none; ");
     btn_noInfinity->setGeometry(200, 300, 200, 20);
     connect(btn_noInfinity, &QPushButton::clicked, this, &gameMatrixGUI::Action);
-
-
 }
 
 void gameMatrixGUI::loadImages() {
@@ -273,15 +271,10 @@ void gameMatrixGUI::Action() {
     btn_noInfinity->hide();
     textLabel->hide();
     setStyleSheet("background-color:white;");
-    // Source is the left-most bottom-most corner
-    Pair src = make_pair(8, 0);
 
-    // Destination is the left-most top-most corner
-    Pair dest = make_pair(0, 9);
-
-    AStar.aStarSearch(AStar.grid, src, dest);
 
     inGame = true;
+
     elfLabel->setAttribute(Qt::WA_TranslucentBackground);
     resize(B_WIDTH, B_HEIGHT);
     //getDimensions(B_WIDTH,B_HEIGHT);
@@ -319,6 +312,8 @@ void gameMatrixGUI::create_Buttons() {
     QPixmap pixmap("/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/Hull_01.png");
     button->setPixmap(pixmap);
 
+    btn->setStyleSheet("background-color: rgb(181,56,56);border: none; ");
+    connect(btn, &QPushButton::clicked, this, &gameMatrixGUI::Start);
     button1->setPixmap(pixmap);
     button2->setPixmap(pixmap);
 }
@@ -328,6 +323,8 @@ void gameMatrixGUI::paint_buttons() {
     button1->setGeometry(900, 175, squareSize, squareSize);
     button2->setGeometry(900, 300, squareSize, squareSize);
     puntos->setGeometry(900, 400, squareSize, squareSize);
+    btn->setGeometry(900, 500, 100, 20);
+
 }
 
 
@@ -365,4 +362,15 @@ void gameMatrixGUI::refresh_matriz(int x, int y) {
             }
         }
     }
+}
+
+void gameMatrixGUI::Start() {
+
+    // Source is the left-most bottom-most corner
+    Pair src = make_pair(8, 0);
+
+    // Destination is the left-most top-most corner
+    Pair dest = make_pair(0, 9);
+
+    AStar.aStarSearch(AStar.grid, src, dest);
 }
