@@ -27,7 +27,7 @@ void Genetic::create_Population() {
 }
 
 Zombies Genetic::create_Zombie() {
-    return Zombies(random_num(0,100), random_num(0,100));
+    return Zombies(random_num(0, 100), random_num(0, 100));
 }
 
 void Genetic::define_Fitness() {

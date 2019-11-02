@@ -19,15 +19,14 @@ gameMatrixGUI::gameMatrixGUI(QWidget *parent) : QWidget(parent) {
 
     resize(600, 500);
     textLabel = new QLabel("Modos de juego: ", this);
-    textLabel->setGeometry(200,100,150,50);
+    textLabel->setGeometry(200, 100, 150, 50);
     btn_Infinity->setStyleSheet("background-color: rgb(181,56,56);border: none; ");
-    btn_Infinity->setGeometry(200,200,200,20);
+    btn_Infinity->setGeometry(200, 200, 200, 20);
     connect(btn_Infinity, &QPushButton::clicked, this, &gameMatrixGUI::Action);
 
 
-
     btn_noInfinity->setStyleSheet("background-color: rgb(0,147,56);border: none; ");
-    btn_noInfinity->setGeometry(200,300,200,20);
+    btn_noInfinity->setGeometry(200, 300, 200, 20);
     connect(btn_noInfinity, &QPushButton::clicked, this, &gameMatrixGUI::Action);
 
 
@@ -53,8 +52,8 @@ void gameMatrixGUI::loadImages() {
 void gameMatrixGUI::initGame() {
 
 
-    x =100;
-    y = (ROW * 70)-20;
+    x = 100;
+    y = (ROW * 70) - 20;
 
     timerId = startTimer(DELAY);
 }
@@ -62,16 +61,17 @@ void gameMatrixGUI::initGame() {
 void gameMatrixGUI::paintEvent(QPaintEvent *e) {
 
     Q_UNUSED(e);
-    if(appear) {
+    if (appear) {
         doDrawing();
     }
 }
+
 void gameMatrixGUI::getDimensions(int dimX, int dimY) {
 
     maxDivX = dimX / squareSize;
     maxDivY = dimY / squareSize;
-    cout<<"MAX en X:"<<maxDivX<<endl;
-    cout<<"MAX en Y:"<<maxDivY<<endl;
+    cout << "MAX en X:" << maxDivX << endl;
+    cout << "MAX en Y:" << maxDivY << endl;
 
 }
 
@@ -80,14 +80,14 @@ void gameMatrixGUI::doDrawing() {
     QPainter qp(this);
     QPen pen(Qt::black, 1, Qt::SolidLine);
     qp.setPen(pen);
-    for(int c = 0; c < COL;c++){
-        for(int f = 0; f< ROW;f++){
-            if(AStar.grid[f][c] == 1) {
-                qp.drawRect((c * squareSize)+100, (f * squareSize)+20, squareSize, squareSize);
-            }else{
+    for (int c = 0; c < COL; c++) {
+        for (int f = 0; f < ROW; f++) {
+            if (AStar.grid[f][c] == 1) {
+                qp.drawRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize);
+            } else {
 
-                qp.fillRect((c * squareSize)+100, (f * squareSize)+20, squareSize, squareSize,Qt::green);
-                qp.drawRect((c * squareSize)+100, (f * squareSize)+20, squareSize, squareSize);
+                qp.fillRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize, Qt::green);
+                qp.drawRect((c * squareSize) + 100, (f * squareSize) + 20, squareSize, squareSize);
             }
         }
     }
@@ -108,7 +108,8 @@ void gameMatrixGUI::doDrawing() {
 
         qp.drawImage(x, y, gameMatrixGUIImg);
         */
-        elfLabel->setGeometry(x, y, 100,100);
+        elfLabel->setGeometry(x, y, 100, 100);
+        paint_buttons();
 
     } else {
 
@@ -127,12 +128,12 @@ void gameMatrixGUI::gameOver(QPainter &qp) {
     int h = height();
     int w = width();
 
-    qp.translate(QPoint(w/2, h/2));
-    qp.drawText(-textWidth/2, 0, message);
+    qp.translate(QPoint(w / 2, h / 2));
+    qp.drawText(-textWidth / 2, 0, message);
 }
 
 void gameMatrixGUI::checkPositions() {
-    for(int i = 0; i<19;i++) {
+    for (int i = 0; i < 19; i++) {
         /*
         if (crusaderList[i].crusaderRect.intersects(gameMatrixGUIRect)) {
             //cout << "Chocoooooooooooo" << endl;
@@ -144,53 +145,53 @@ void gameMatrixGUI::checkPositions() {
         }
         **/
     }
-    if(shieldRect.intersects(gameMatrixGUIRect)){
+    if (shieldRect.intersects(gameMatrixGUIRect)) {
 
     }
 }
 
 void gameMatrixGUI::move() {
 
-        //cout << "X1: " << AStar.XList[counter]<< " Y1: " << AStar.YList[counter] << " X2: " << AStar.XList[counter+1] << " Y2: " << AStar.YList[counter+1] << endl;
-        if(AStar.XList.size() == counter){
-            x =100;
-            y = (ROW * 70)-20;
-            counter =1;
+    //cout << "X1: " << AStar.XList[counter]<< " Y1: " << AStar.YList[counter] << " X2: " << AStar.XList[counter+1] << " Y2: " << AStar.YList[counter+1] << endl;
+    if (AStar.XList.size() == counter) {
+        x = 100;
+        y = (ROW * 70) - 20;
+        counter = 1;
+        arrivedX = false;
+        arrivedY = false;
+    } else {
+        if (arrivedX == true && arrivedY == true) {
+            counter++;
             arrivedX = false;
             arrivedY = false;
-        }else {
-            if (arrivedX == true && arrivedY == true) {
-                counter++;
-                arrivedX = false;
-                arrivedY = false;
+
+        } else {
+            cout << "DestX: " << AStar.XList[counter] << "DestY: " << AStar.YList[counter] << endl;
+            if (AStar.XList[counter] > x) {
+                x += DOT_SIZE;
 
             } else {
-                cout << "DestX: " << AStar.XList[counter] << "DestY: " << AStar.YList[counter] << endl;
-                if (AStar.XList[counter] > x) {
-                    x += DOT_SIZE;
-
+                if (AStar.XList[counter] == x) {
+                    cout << "Hola22123" << endl;
+                    arrivedX = true;
                 } else {
-                    if (AStar.XList[counter] == x) {
-                        cout << "Hola22123" << endl;
-                        arrivedX = true;
-                    } else {
-                        x -= DOT_SIZE;
-                    }
-                }
-                if (AStar.YList[counter] > y) {
-                    y += DOT_SIZE;
-
-                } else {
-                    if (AStar.YList[counter] == y) {
-                        cout << "Hola7777" << endl;
-                        arrivedY = true;
-                    } else {
-                        y -= DOT_SIZE;
-                    }
+                    x -= DOT_SIZE;
                 }
             }
+            if (AStar.YList[counter] > y) {
+                y += DOT_SIZE;
 
+            } else {
+                if (AStar.YList[counter] == y) {
+                    cout << "Hola7777" << endl;
+                    arrivedY = true;
+                } else {
+                    y -= DOT_SIZE;
+                }
+            }
         }
+
+    }
 
 
 }
@@ -204,11 +205,10 @@ void gameMatrixGUI::checkCollision() {
 
 }
 
-int gameMatrixGUI::generateRnd(){
+int gameMatrixGUI::generateRnd() {
     int num = (rand() % 500) + 1;
     return num;
 }
-
 
 
 void gameMatrixGUI::timerEvent(QTimerEvent *e) {
@@ -224,39 +224,34 @@ void gameMatrixGUI::timerEvent(QTimerEvent *e) {
     }
 
 
-
-
 }
-void gameMatrixGUI::goTo(int x1, int y1, int x2, int y2 ){
+
+void gameMatrixGUI::goTo(int x1, int y1, int x2, int y2) {
     int dx, dy, p, x_b, y_b;
 
 
+    p = 2 * dy - dx;
+    if (x < x2) {
 
-    p=2*dy-dx;
-    if(x<x2)
-    {
-
-        if(p>=0)
-        {
+        if (p >= 0) {
             //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
-            y=y+DOT_SIZE;
-            p=p+2*dy-2*dx;
-        }
-        else
-        {
+            y = y + DOT_SIZE;
+            p = p + 2 * dy - 2 * dx;
+        } else {
             //std::cout<<"("<<x<<","<<y<<")"<<std::endl;
-            p=p+2*dy;
+            p = p + 2 * dy;
         }
-        x=x+DOT_SIZE;
+        x = x + DOT_SIZE;
     }
 }
 
 void gameMatrixGUI::mouseDoubleClickEvent(QMouseEvent *event) {
 
-    x = event->x();
-    y= event->y();
-    cout<<"X: "<< event->x() << " Y: "<< event->y()<<endl;
+//    x = event->x();
+//    y= event->y();
+    cout << "X: " << event->x() << " Y: " << event->y() << endl;
 };
+
 void gameMatrixGUI::Action() {
     appear = true;
     btn_Infinity->hide();
@@ -264,9 +259,11 @@ void gameMatrixGUI::Action() {
     textLabel->hide();
     setStyleSheet("background-color:white;");
     // Source is the left-most bottom-most corner
-    Pair src = make_pair(8,0 );
+    Pair src = make_pair(8, 0);
+
     // Destination is the left-most top-most corner
     Pair dest = make_pair(0, 9);
+
     AStar.aStarSearch(AStar.grid, src, dest);
 
     inGame = true;
@@ -274,5 +271,58 @@ void gameMatrixGUI::Action() {
     resize(B_WIDTH, B_HEIGHT);
     //getDimensions(B_WIDTH,B_HEIGHT);
     loadImages();
+    create_Buttons();
     initGame();
+}
+
+void gameMatrixGUI::create_Buttons() {
+    QPixmap pixmap("/home/danium/Documents/TEC/Datos II/Proyecto II/CEvsZombies/Images/Hull_01.png");
+    button->setPixmap(pixmap);
+
+    button1->setPixmap(pixmap);
+    button2->setPixmap(pixmap);
+}
+
+void gameMatrixGUI::paint_buttons() {
+    button->setGeometry(900, 50, squareSize, squareSize);
+    button1->setGeometry(900, 175, squareSize, squareSize);
+    button2->setGeometry(900, 300, squareSize, squareSize);
+    puntos->setGeometry(900,400,squareSize,squareSize);
+}
+
+
+void gameMatrixGUI::mousePressEvent(QMouseEvent *event) {
+    int x = event->x();
+    int y = event->y();
+    //buttons
+    if (x > 900 and x < 975) {
+        if (y > 50 and y < 125) {
+            cout << "button\n";
+        }
+        if (y > 175 and y < 250) {
+            cout << "button1\n";
+        }
+        if (y > 300 and y < 375) {
+            cout << "button2\n";
+        }
+    } else if (x > 100 and x < 750) {
+        int posX = (x - 100) / 75;
+        int posY = (y - 20) / 75;
+        cout << "x:" << posX << " y:" << posY << endl;
+        refresh_matriz(posX, posY);
+    }
+}
+
+void gameMatrixGUI::refresh_matriz(int x, int y) {
+    for (int row = 0; row < 9; row++) {
+        for (int col = 0; col < 10; col++) {
+            if (x == row and y == col and pts!=0) {
+                AStar.grid[col][row] = 0;
+                pts-=20;
+                std::string s = to_string(pts);
+                QString str = QString::fromUtf8(s.c_str());
+                puntos->setText(str);
+            }
+        }
+    }
 }

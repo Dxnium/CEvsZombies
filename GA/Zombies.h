@@ -9,8 +9,12 @@
 class Zombies {
 public:
     int vida;
-    Zombies();
+    Zombies(int i, int i1);
     ~Zombies();
+
+    int fitness;
+    int y;
+    int x;
 };
 
 
